@@ -1,0 +1,85 @@
+<launch>
+
+<!--point process-->
+  <node name="lidar_detect_node" pkg="lidar_detect" type="lidar_detect_node" output="screen" >
+    <!--<param name="sub_sick_topic_" value="scan" />
+    <param name="sub_veld_topic" value="$(arg topic2)" />-->
+
+    
+    <param name="sub_left_topic" value="/left/rslidar_points" type="string"/>
+    <param name="sub_right_topic" value="/right/rslidar_points" type="string"/>
+    <param name="pub_heart_topic" value="HeartBeat" type="string"/>
+    <param name="pub_gridmap_topic" value="gridmap" type="string"/>
+
+
+	
+    <param name="frame" value="rslidar" />
+    <param name="frameid_ocmap_" value="rslidar" />
+    <param name="cellResolution" value="0.2" />
+    <param name="tolerance" value="0.7" />
+    <param name="Leafszie" value="0.2"/>
+
+    <param name="grid_counted" value="5"/>
+
+    <param name="z_limit_min" value="-0.9"/>
+    <param name="z_limit_max" value="0.5"/>
+    <param name="y_limit_min" value="-20"/>
+    <param name="y_limit_max" value="20"/>
+    <param name="x_limit_min" value="0.1"/>
+    <param name="x_limit_max" value="80"/>
+    <param name="y_delta" value="2.5"/>
+
+    <param name="car_width" value="0"/>
+    <param name="car_length" value="0.1"/>
+
+    <param name="gridexpanwith" value="5"/>
+    <param name="expanflag" value="true"/>
+
+    <param name="Map_xMax" value="20"/>
+    <param name="Map_yMax" value="80"/>
+    <param name="Map_xMin" value="-20"/>
+    <param name="Map_yMin" value="0.1"/>
+
+    <param name="offestofsickx" value="0"/>
+    <param name="offestofsicky" value="0"/>
+    <param name="offestofsickz" value="0"/>
+
+    <param name="MinClusterSize" value="4"/>	
+
+
+    <!--<param name="frame" value="lidar" type="string"/>
+    <param name="frameid_ocmap_" value="lidar" type="string"/>
+    <param name="cellResolution" value="0.25" type="double"/>
+    <param name="lidar_transform_switch" value="1" type="int"/>
+    <param name="grid_counted" value="2" type="int"/>
+
+    <param name="z_limit_min" value="0" type="double"/>
+    <param name="z_limit_max" value="0.5" type="double"/>
+    <param name="y_limit_min" value="-64" type="double"/>
+    <param name="y_limit_max" value="64" type="double"/>
+    <param name="x_limit_min" value="-64" type="double"/>
+    <param name="x_limit_max" value="64" type="double"/>
+   
+    <param name="car_width" value="1.8" type="double"/>
+    <param name="car_length" value="4" type="double"/>
+
+  
+    <param name="Map_xMax" value="64" type="double"/>
+    <param name="Map_yMax" value="64" type="double"/>
+    <param name="Map_xMin" value="-64" type="double"/>
+    <param name="Map_yMin" value="-64" type="double"/>-->
+
+    <!--counter clock wise positive deg -->
+    <param name="yaw_left_to_center" value="-46.5" type="double"/>
+    <param name="yaw_right_to_center" value="56.8" type="double"/>
+    <!--forward positive -->
+    <param name="x_left_to_center" value="0.0" type="double"/>
+    <param name="x_right_to_center" value="0.0" type="double"/>
+    <!--left positive -->
+    <param name="y_left_to_center" value="-1.153" type="double"/>
+    <param name="y_right_to_center" value="1.157" type="double"/>
+    
+
+  </node>
+
+</launch>
