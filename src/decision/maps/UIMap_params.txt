@@ -1,0 +1,18 @@
+29402.890 4359902.845 24.244 -10.324 1.26806 10.000 192.000 -0.22689 0.000 299.000
+GlobalOffset_X: 29402.890, GlobalOffset_Y: 4359902.845
+UIMap_Xoffset0: 24.244, UIMap_Yoffset0: -10.324
+UIMap_Scale:    1.26806
+UIMap_Margin:   10.000
+UIMap_Ymax:     192.000
+UIMap_rotateDeg:-0.22689 | -13.00000
+UIMap_Xoffset:  0.000, UIMap_Yoffset:  299.000
+
+x = x - GlobalOffset_X 
+y = y - GlobalOffset_Y 
+temp_x = x * cos(UIMap_rotateDeg) - y * sin(UIMap_rotateDeg)
+temp_y = x * sin(UIMap_rotateDeg) + y * cos(UIMap_rotateDeg)
+x = temp_x - UIMap_Xoffset0
+y = temp_y - UIMap_Yoffset0
+x = round(x * UIMap_Scale) + UIMap_Margin + UIMap_Xoffset
+y = round(y * UIMap_Scale) + UIMap_Margin 
+y = UIMap_Ymax - y + UIMap_Margin + UIMap_Yoffset
