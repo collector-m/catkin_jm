@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>can_to_eth</name>
+  <version>0.1.5</version>
+  <description>The lms1xx package contains a basic ROS driver for the SICK LMS1xx line of LIDARs.</description>
+
+  <author>Konrad Banachowicz</author>
+  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+  <url type="website">http://ros.org/wiki/LMS1xx</url>
+
+  <license>LGPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>rosconsole_bridge</depend>
+  <depend>roscpp</depend>
+  <depend>roscpp_serialization</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf</depend>
+
+
+  <test_depend>roslaunch</test_depend>
+  <test_depend>roslint</test_depend>
+  <test_depend>rosunit</test_depend>
+</package>

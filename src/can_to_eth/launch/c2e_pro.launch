@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="can_to_eth" name="c2e_node" type="c2e_node" output="screen">
+    <param name="host" value="192.168.0.7" />
+    <!--<param name="port1" value="20001" />
+    <param name="port2" value="20005" />-->
+      <param name="port1" value="4001" />
+    <param name="port2" value="4002" />
+    <param name="flag_test" value="false" />
+    
+    <!--true:aeb control, false:direct control-->
+    <param name="flag_mode" value="true" /> 
+  </node>
+
+  <!--发送值都是放大10倍的值-->
+  <node name="odom_pub_node" pkg="can_to_eth" type="odom_pub_node" output="screen">
+    <param name="Kp_th" value="31.5" />
+    <param name="Ki_th" value="1.75" />
+    <param name="Kd_th" value="0.2" />
+
+    <param name="Kp_b" value="3.6" />
+    <param name="Ki_b" value="0" />
+    <param name="Kd_b" value="0" />
+  </node>
+
+  <!--<node name="decision_node" pkg="can_to_eth" type="decision_node" output="screen" />-->
+</launch>
